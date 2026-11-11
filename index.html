@@ -332,7 +332,18 @@ footer .orn { justify-content: center; }
   .panel, .scrim { transition: none; }
   html { scroll-behavior: auto; }
 }
-</style>
+/* Versión para pantallas grandes (PC, portátil, tablet horizontal) */
+@media (min-width: 900px) {
+  body { padding-left: 40px; padding-right: 40px; }
+  .wrap { max-width: 1120px; gap: 80px; }
+  .hero { padding: 64px 48px 52px; }
+  .hero .logo { width: 160px; }
+  .hero h1 { font-size: clamp(5rem, 9vw, 8rem); }
+  .menu { grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .rcards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; overflow: visible; scroll-snap-type: none; padding-bottom: 4px; }
+  .rcard { flex: none; }
+  .about p { max-width: 70ch; }
+}</style>
 </head>
 <body>
 <div class="intro" id="intro" aria-hidden="true">
